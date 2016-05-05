@@ -14,8 +14,6 @@ import com.arte.photoapp.fragments.PhotoDetailFragment;
 
 public class PhotoDetailActivity extends AppCompatActivity {
 
-    private ProgressDialog mProgressDialog;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,11 +40,6 @@ public class PhotoDetailActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
-
-        mProgressDialog = new ProgressDialog(this);
-        mProgressDialog.setMessage(getString(R.string.photo_list_loading));
-        mProgressDialog.show();
-        // TODO mProgressDialog should be hidden when network request finishes
     }
 
     private void setupFragment(Bundle savedInstanceState) {
